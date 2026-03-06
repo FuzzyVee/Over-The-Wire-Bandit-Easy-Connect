@@ -92,7 +92,7 @@ EOF
 
     _sso_test_pass() {
         local user="$1" pass="$2"
-        sshpass -p "$pass" ssh ${SSH_COMMON_OPTS} -o BatchMode=yes "${user}@${SSH_HOST}" -p "$SSH_PORT" exit 0 2>/dev/null
+        sshpass -p "$pass" ssh ${SSH_COMMON_OPTS} "${user}@${SSH_HOST}" -p "$SSH_PORT" exit 0 2>/dev/null
     }
 
     # -- Preflight Checks -----------------------------------------------------
